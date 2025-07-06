@@ -11,7 +11,6 @@
 
   <table>
     <tr>
-      <th></th>
       <th>İsim</th>
       <th>Görev</th>
     </tr>

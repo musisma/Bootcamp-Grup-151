@@ -1,8 +1,6 @@
 <html>
 <body>
 
-<!–![DiaScan](bootcampFiles/logo.png)-- -->
-
 # **Takım & Proje İsmi**
 
 ### **`DiaScan`**
@@ -120,85 +118,6 @@
  </details>
 
   ---
-
-  <!–<details>
-    <summary><h1>Sprint 2</h1></summary>
-
-
-  <details>
-    <summary><h3>Sprint 2 - App Screenshots</h3></summary>
-  <table style="width: 100%;">
-    <tr>
-      <td colspan="1" style="width: 25%;"><img src="bootcampFiles/1.png" style="max-width: 100%; height: auto;"></td>
-    </tr>
-    <tr>
-      <td colspan="4"><img src="bootcampFiles/2.png" style="max-width: 100%; height: auto;"></td>
-    </tr>
-    <tr>
-      <td colspan="4"><img src="bootcampFiles/3.png" style="max-width: 100%; height: auto;"></td>
-    </tr>
-    <tr>
-      <td colspan="4"><img src="bootcampFiles/4.png" style="max-width: 100%; height: auto;"></td>
-    </tr>
-      <tr>
-      <td colspan="4"><img src="bootcampFiles/5.png" style="max-width: 100%; height: auto;"></td>
-    </tr>
-  </table>
-  </details>  
-
-  <details>
-    <summary><h3>Sprint 2 Jira Screenshots</h3></summary>
-    <img src="bootcampFiles/sprint2jira1.png" style="max-width: 100%; height: auto;">
-    <img src="bootcampFiles/sprint2jira2.png" style="max-width: 100%; height: auto;">
-  </details>
-
-  <details>
-    <summary><h3>Sprint 2 Figma Screenshots</h3></summary>
-    <img src="bootcampFiles/sprint2figma.png" style="max-width: 100%; height: auto;">
-  </details>
-
-  <details>
-    <summary><h3>Sprint 2 Burndown Chart</h3></summary>
-    <img src="bootcampFiles/sprint2burndown.png" style="max-width: 100%; height: auto;">
-  </details>
-
-  <details>
-    <summary><h3>Sprint 2 Daily Scrum Screenshots</h3></summary>
-    <img src="bootcampFiles/scrum1.png" style="max-width: 100%; height: auto;">
-    <img src="bootcampFiles/scrum2.png" style="max-width: 100%; height: auto;">
-  </details>
-
-
-**Sprint Notları**:
-
-    - Uygulamada kulanıcıların açılan anketlere katılabilmesi için arayüz oluşturuldu
-    
-    - Ana ekran yeniden düzenlendi ve akış oluşturuldu
-    
-    - Firebase bağlantıları için hazırlık yapıldı
-    
-    - Uygulama giriş ekranları yeniden düzenlendi
-    
-    - App bar üzerine 4 ana sekme eklendi
-    
-    - Bildirim sistemi hazırlandı
-    
-  - **Sprint için Belirlenen Toplam Puan**: 120 puan (1. Sprint için belirlenen puan 120)
-  - **Toplam Tamamlanan Puan**: `(240 puan tamamlandı)`
-  - **Puan Tamamlama Mantığı**: Her iki Sprint için 4 tasarım 4 kod olmak üzere 8 görev belirlendi. Zorluk düzeyleri her üye için eşit ayarlandığı için her bir görev 15 puan sayıldı. 
-  
-  - **Sprint Review:**
-    - İkinci Sprint için ağırlıklı olarak uygulama mimarisine çalıştık
-    - Ekipte kod yazma görevini Mustafa İsmail Öztürk ve İrem Atlı üstlendi
-    - Muhamet Ünveren kendi isteğiyle ekipten ayrıldı
-    - Uygulamanın anket yanıtlama sistemi için hazırlıklara başlandı
-  
-  - **Sprint Retrospective:**
-    - Bu sprint içinde iletişim anlamında kendimizi geliştirmemiz gerektiğini gördük
-    - Hızlanmak amacıyla tüm kod yazma işlemlerini iki kişinin üstlenmesine kara verdik
-    - Ekip içinde iyi düzeyde uyumu yakaladık
-    - Önümüzdeki sprint için veritabanı işlemlerini tamamlamamız gerekiyor
- </details>-- -->
 
 
   </details>

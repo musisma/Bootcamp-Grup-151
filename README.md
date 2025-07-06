@@ -30,10 +30,6 @@
       <td>Nur Şahin</td>
       <td>Developer</td>
     </tr>
-    <tr>
-      <td>Emre Gürbüz</td>
-      <td>Pasif Üye</td>
-    </tr>
   
   </table>
 

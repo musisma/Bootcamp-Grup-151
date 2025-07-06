@@ -44,9 +44,9 @@
   DiaScan, diyabet hastaları başta olmak üzere kronik hastalık riski taşıyan bireylerin tahlil sonuçlarına dayalı olarak kişisel sağlık risklerini değerlendiren gelişmiş bir dijital sağlık uygulamasıdır. Yapay zeka destekli veri seti ve analiz motoruyla, bireylerin diyabet ve kalp krizi gibi kritik sağlık sorunlarına yönelik risk profillerini bilimsel yöntemlerle tahmin eder ve önleyici adımlar konusunda farkındalık yaratır. Kullanıcıya özel oluşturulan sağlık risk raporuna göre gerekli tedavi adımlarını açıklayarak yerel sağlık kuruluşlarına yönlendirilmesi sağlar.
 
   <details>
-    <summary><h2>Ürün Özellikleri</h2></summary>
+    <summary><h3>Ürün Özellikleri</h3></summary>
 
-  <h3>Akıllı Tahlil Verisi Analizi:</h3>
+  <h2>Akıllı Tahlil Verisi Analizi:</h2>
     <p>Kan şekeri, HbA1c, kolesterol düzeyleri, tansiyon gibi medikal tahlil sonuçlarını detaylı analiz eder.</p>
 
   <h2>Hastalık Risk Skoru Hesaplama:</h2>
@@ -64,7 +64,7 @@
   </details>
 
   <details>
-    <summary><h2>Hedef Kitle</h2></summary>
+    <summary><h3>Hedef Kitle</h3></summary>
     <p>DiaScan, sağlık verilerini bilinçli şekilde yönetmek isteyen bireyler için geliştirilmiş kapsamlı bir analiz uygulamasıdır. Özellikle Tip 1 ve Tip 2 diyabet hastalarının kan şekeri, HbA1c gibi değerlerini takip ederek hastalıklarını daha iyi yönetmelerine yardımcı olurken, kalp krizi ve böbrek yetmezliği gibi komplikasyonlara karşı kişiye özel risk skorları sunar. Ailesinde kronik hastalık öyküsü bulunan ya da yaşam tarzı nedeniyle risk altında olduğunu düşünen bireyler için erken uyarı sistemiyle önemli bir rehberdir. Henüz tanı konulmamış ancak sağlık verilerini yorumlamakta zorlanan bireyler de tahlil sonuçlarını sade ve anlaşılır grafiklerle değerlendirme fırsatı bulur. Sağlık profesyonelleri ise hastalarının verilerini daha etkin izleyebilir ve risk analizlerini dijital ortamda hastalarıyla paylaşarak danışan takibini kolaylaştırabilir. Kısacası, ister mevcut bir rahatsızlığı olsun, ister sağlığını koruma bilinciyle hareket eden biri olsun, DiaScan herkesin sağlık yönetiminde bilinçli adımlar atmasını destekleyen güvenilir bir yol arkadaşıdır.</p>
   </details>
 
@@ -93,6 +93,8 @@
     - UI dizaynı için 'Figma' programı tercih edildi.
 
     - Web ve mobil platform tercih edildi.
+
+    - Mobil geliştirme için Flutter tercih edildi. 
 
     - Uygulama veri tabanı için 'Firebase' tercih edildi.
     

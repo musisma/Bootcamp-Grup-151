@@ -97,9 +97,6 @@
     <tr>
       <td colspan="4"><img src="4.png" style="max-width: 100%; height: auto;"></td>
     </tr>
-      <tr>
-      <td colspan="4"><img src="5.png" style="max-width: 100%; height: auto;"></td>
-    </tr>
   </table>
   </details>
 

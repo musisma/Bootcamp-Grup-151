@@ -118,7 +118,7 @@
     
   - **Sprint için Belirlenen Toplam Puan**: 120 puan
   - **Tamamlanan Puan**: `(120 puan tamamlandı)`
-  - **Sprint Tamamlama Mantığı**: Sprint görevleri ekip içinde eşit şekilde dağıtıldı ve her bir görev 6 puan olmak üzere toplam 6 görev tamamlandı.
+  - **Sprint Tamamlama Mantığı**: Sprint görevleri ekip içinde eşit şekilde dağıtıldı ve her bir görev 20 puan olmak üzere toplam 6 görev tamamlandı.
   
   - **Sprint Review:**
     - Birinci Sprint için ağırlıklı olarak veri setleri üzerine çalıştık.

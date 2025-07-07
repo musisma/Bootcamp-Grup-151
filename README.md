@@ -78,7 +78,28 @@
     <summary><h3>Sprint 1 - Google Collab Link</h3></summary>
   <table style="width: 100%;">
     <tr>
-      <td colspan="4" style="text-align: center;"><a href="https://www.google.com">Collab Linki</a></td>
+      <td colspan="4" style="text-align: center;"><a href="https://colab.research.google.com/drive/1rtukOjivKSLa3CVLPMKQJGOUScvI5B1_?usp=sharing">Collab Linki</a></td>
+  </table>
+  </details>
+
+  <details>
+    <summary><h3>Sprint 1 - Daily Scrum</h3></summary>
+  <table style="width: 100%;">
+    <tr>
+      <td colspan="1" style="width: 25%;"><img src="bootcampFiles/1.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="4"><img src="bootcampFiles/2.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="4"><img src="bootcampFiles/3.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="4"><img src="bootcampFiles/4.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+      <tr>
+      <td colspan="4"><img src="bootcampFiles/5.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
   </table>
   </details>
 
@@ -100,6 +121,7 @@
     
   - **Sprint için Belirlenen Toplam Puan**: 120 puan
   - **Tamamlanan Puan**: `(120 puan tamamlandı)`
+  - **Sprint Tamamlama Mantığı**: Sprint görevleri ekip içinde eşit şekilde dağıtıldı ve her bir görev 6 puan olmak üzere toplam 6 görev tamamlandı.
   
   - **Sprint Review:**
     - Birinci Sprint için ağırlıklı olarak veri setleri üzerine çalıştık.

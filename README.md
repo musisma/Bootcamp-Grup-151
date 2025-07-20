@@ -1,6 +1,6 @@
 <html>
 <body>
-![DiaScan](logo.jpeg)
+<img src="logo.jpeg" style="max-width: 100%; height: auto;">
 
 # **Takım & Proje İsmi**
 

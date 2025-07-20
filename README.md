@@ -142,10 +142,10 @@
     <summary><h3>Sprint 2 - Miro Board Screen Shots</h3></summary>
   <table style="width: 100%;">
     <tr>
-      <td colspan="1" style="width: 25%;"><img src="miro1.png" style="max-width: 100%; height: auto;"></td>
+      <td colspan="1" style="width: 25%;"><img src="miro1.jpeg" style="max-width: 100%; height: auto;"></td>
     </tr>
     <tr>
-      <td colspan="4"><img src="miro2.png" style="max-width: 100%; height: auto;"></td>
+      <td colspan="4"><img src="miro2.jpeg" style="max-width: 100%; height: auto;"></td>
     </tr>
   </table>
   </details>

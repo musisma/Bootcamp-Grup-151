@@ -1,6 +1,6 @@
 <html>
 <body>
-![Corprate](bootcampFiles/logo.png)
+![DiaScan](logo.jpeg)
 
 # **Takım & Proje İsmi**
 

@@ -133,6 +133,63 @@
     - Kod yazamayanların iş yükünü takım içinde daha dengeli paylaştırmalıyız.
  </details>
 
+ <details>
+    <summary><h1>Sprint 2</h1></summary>
+
+
+  <details>
+    <summary><h3>Sprint 1 - Miro Board Screen Shots</h3></summary>
+  <table style="width: 100%;">
+    <tr>
+      <td colspan="4" style="text-align: center;"><a href="https://colab.research.google.com/drive/1rtukOjivKSLa3CVLPMKQJGOUScvI5B1_?usp=sharing">Collab Linki</a></td>
+  </table>
+  </details>
+
+  <details>
+    <summary><h3>Sprint 1 - Daily Scrum Screen Shots</h3></summary>
+  <table style="width: 100%;">
+    <tr>
+      <td colspan="1" style="width: 25%;"><img src="1.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="4"><img src="2.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="4"><img src="3.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="4"><img src="4.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+  </table>
+  </details>
+
+**Sprint Notları**:
+
+    - Diyabet hastalığının modeli geliştirilmiştir.
+    
+    - Hastanın Pedigree değeri direkt değer olarak alınamayacağından pedigree için ayriyeten bir model kurulmuştur.
+
+    - Ürünün mobil uygulaması için Flutter’dan çalışmalara başlanmıştır.
+
+    - Ürünün web sitesi için çalışmalara başlanmıştır.
+    
+    
+  - **Sprint için Belirlenen Toplam Puan**: 100 puan
+  - **Tamamlanan Puan**: `(100 puan tamamlandı)`
+  - **Sprint Tamamlama Mantığı**: Sprint görevleri ekip içinde eşit şekilde dağıtıldı ve her bir görev 20 puan olmak üzere toplam 5 görev tamamlandı.
+  
+  - **Sprint Review:**
+    - İkinci sprint için ağırlıklı yapay zeka modeli geliştirilmesi için çalışıldı.
+    - Birinci sprinte göre ekip halinde daha aktif çalışıldı.
+    - Bir üye iletişimi kesti ve 4 kişi kaldık.
+    - Web ve mobil için frontend çalışmalarına başlandı.
+  
+  - **Sprint Retrospective:**
+    - Üçüncü Sprint için ağırlıklı olarak web ve uygulama tasarımı üzerine çalışmaya karar verdik .
+    - Daily Scrum toplantıları artık aksamıyor, daha çok yazılı olarak iletişim kuruyoruz.
+    - Artık backend geliştirmeye başlamalıyız.
+ </details>
+
   ---
 
 

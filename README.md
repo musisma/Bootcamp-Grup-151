@@ -136,10 +136,10 @@
 
  <details>
     <summary><h1>Sprint 2</h1></summary>
-
+ <a href="https://miro.com/app/board/uXjVJcKGRqU=/?share_link_id=623137938237">Miro Board Linki</a>
 
   <details>
-    <summary><h3>Sprint 1 - Miro Board Screen Shots</h3></summary>
+    <summary><h3>Sprint 2 - Miro Board Screen Shots</h3></summary>
   <table style="width: 100%;">
     <tr>
       <td colspan="1" style="width: 25%;"><img src="miro1.png" style="max-width: 100%; height: auto;"></td>
@@ -151,7 +151,7 @@
   </details>
 
   <details>
-    <summary><h3>Sprint 1 - Daily Scrum Screen Shots</h3></summary>
+    <summary><h3>Sprint 2 - Daily Scrum Screen Shots</h3></summary>
   <table style="width: 100%;">
     <tr>
       <td colspan="1" style="width: 25%;"><img src="daily1.png" style="max-width: 100%; height: auto;"></td>

@@ -34,11 +34,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="../app.html#hero">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about/about.html">Hakkımızda</a></li>
                     <li class="nav-item"><a class="nav-link" href="../app.html#services">Hizmetler</a></li>
                     <li class="nav-item"><a class="nav-link" href="../app.html#features">Özellikler</a></li>
                     <li class="nav-item"><a class="nav-link" href="../app.html#doctors">Ekibimiz</a></li>
                     <li class="nav-item"><a class="nav-link" href="../app.html#contact">İletişim</a></li>
                 </ul>
+                <a href="glucose-entry/glucose-entry.html" class="btn btn-primary ms-3">Şeker Hesapla</a>
                 <a href="../login/login.html" class="btn btn-primary ms-3">Giriş Yap</a>
             </div>
         </div>
@@ -48,11 +50,11 @@
     <section id="glucose-support">
         <div class="login-card">
             <div class="form-container">
-                <h2>Şekerinizi Girin ve Tavsiye Listesini İsteyin</h2>
+                <h2>Kan Şekeri Bilginizi Girin, Bilimsel Önerilerle Destek Alın</h2>
                 <form id="glucose-form" [formGroup]="glucoseForm" (ngSubmit)="onSubmit()">
                     <input type="number" formControlName="glucose" placeholder="Glikoz değeri" class="form-control" required aria-describedby="glucoseHelp">
                     <div id="glucoseHelp" class="form-text"><b></b></div>
-                    <button type="submit">Gir</button>
+                    <button type="submit">Hesapla</button>
                 </form>
             </div>
         </div>

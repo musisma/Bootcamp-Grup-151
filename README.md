@@ -1,7 +1,7 @@
 
 <html>
 <body>
-<img src="logo.jpeg" style="max-width: 100%; height: auto;">
+<img src="screenshots/logo.jpeg" style="max-width: 100%; height: auto;">
 
 # **Takım & Proje İsmi**
 
@@ -88,16 +88,16 @@
     <summary><h3>Sprint 1 - Daily Scrum</h3></summary>
   <table style="width: 100%;">
     <tr>
-      <td colspan="1" style="width: 25%;"><img src="1.png" style="max-width: 100%; height: auto;"></td>
+      <td colspan="1" style="width: 25%;"><img src="screenshots/1.png" style="max-width: 100%; height: auto;"></td>
     </tr>
     <tr>
-      <td colspan="4"><img src="2.png" style="max-width: 100%; height: auto;"></td>
+      <td colspan="4"><img src="screenshots/2.png" style="max-width: 100%; height: auto;"></td>
     </tr>
     <tr>
-      <td colspan="4"><img src="3.png" style="max-width: 100%; height: auto;"></td>
+      <td colspan="4"><img src="screenshots/3.png" style="max-width: 100%; height: auto;"></td>
     </tr>
     <tr>
-      <td colspan="4"><img src="4.png" style="max-width: 100%; height: auto;"></td>
+      <td colspan="4"><img src="screenshots/4.png" style="max-width: 100%; height: auto;"></td>
     </tr>
   </table>
   </details>
@@ -143,10 +143,10 @@
     <summary><h3>Sprint 2 - Miro Board Screen Shots</h3></summary>
   <table style="width: 100%;">
     <tr>
-      <td colspan="1" style="width: 25%;"><img src="miro1.jpeg" style="max-width: 100%; height: auto;"></td>
+      <td colspan="1" style="width: 25%;"><img src="screenshots/miro1.jpeg" style="max-width: 100%; height: auto;"></td>
     </tr>
     <tr>
-      <td colspan="4"><img src="miro2.jpeg" style="max-width: 100%; height: auto;"></td>
+      <td colspan="4"><img src="screenshots/miro2.jpeg" style="max-width: 100%; height: auto;"></td>
     </tr>
   </table>
   </details>
@@ -155,13 +155,13 @@
     <summary><h3>Sprint 2 - Daily Scrum Screen Shots</h3></summary>
   <table style="width: 100%;">
     <tr>
-      <td colspan="1" style="width: 25%;"><img src="daily1.png" style="max-width: 100%; height: auto;"></td>
+      <td colspan="1" style="width: 25%;"><img src="screenshots/daily1.png" style="max-width: 100%; height: auto;"></td>
     </tr>
     <tr>
-      <td colspan="4"><img src="daily2.png" style="max-width: 100%; height: auto;"></td>
+      <td colspan="4"><img src="screenshots/daily2.png" style="max-width: 100%; height: auto;"></td>
     </tr>
     <tr>
-      <td colspan="4"><img src="daily3.png" style="max-width: 100%; height: auto;"></td>
+      <td colspan="4"><img src="screenshots/daily3.png" style="max-width: 100%; height: auto;"></td>
     </tr>
   </table>
   </details>

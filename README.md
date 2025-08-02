@@ -1,7 +1,7 @@
 
 <html>
 <body>
-<img src="logo.jpeg" style="max-width: 100%; height: auto;">
+<img src="screenshots/logo.jpeg" style="max-width: 100%; height: auto;">
 
 # **Takım & Proje İsmi**
 

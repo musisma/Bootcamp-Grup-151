@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../logo_1.png" type="image/png">
+    <title>DiaScan - Giriş Yap</title>
+    <!-- SEO Meta Etiketleri -->
+    <meta name="description" content="DiaScan hesabınıza giriş yapın ve sağlık verilerinizi analiz edin.">
+    <meta name="keywords" content="sağlık, tahlil analizi, yapay zeka, diyabet, giriş yap">
+    <meta property="og:title" content="DiaScan - Giriş Yap">
+    <meta property="og:description" content="DiaScan hesabınıza giriş yaparak sağlık verilerinizi yönetin.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Poppins ve Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Angular Scripts -->
+    <script src="https://code.angularjs.org/1.8.2/angular.min.js"></script>
+    <style>
+        /* Genel Stil Ayarları */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F1F8F5;
+            color: #424242;
+            overflow-x: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        /* Renk Paleti */
+        :root {
+            --primary-green: #A5D6A7;
+            --light-green: #C8E6C9;
+            --neutral-gray: #B0BEC5;
+            --dark-gray: #424242;
+            --pastel-green: #81C784;
+            --white: #FAFAFA;
+            --light-bg: #F1F8F5;
+            --new-dark: #2d3436;
+            --new-feature-green: #81C784;
+        }
+        /* Karanlık Mod */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #2A3A3A;
+                color: #E0E0E0;
+            }
+            .navbar, .card {
+                background-color: #1A2A2A;
+            }
+            :root {
+                --primary-green: #81C784;
+                --light-green: #A5D6A7;
+            }
+        }
+        /* Navbar Stilleri */
+        .navbar {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 1rem 0;
+        }
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+        .nav-link {
+            color: var(--neutral-gray);
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--primary-green);
+        }
+        .btn-primary {
+            background-color: var(--primary-green);
+            border-color: var(--primary-green);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(165,214,167,0.2);
+        }
+        .btn-primary:hover {
+            background-color: var(--white);
+            border-color: var(--primary-green);
+            color: var(--primary-green);
+            transform: scale(1.05);
+        }
+        /* Login Section */
+        #login {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+        .login-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 5px 5px 15px #e0e0e0, -5px -5px 15px #ffffff;
+            transition: transform 0.3s;
+        }
+        .login-card:hover {
+            transform: translateY(-5px);
+        }
+        .form-container {
+            text-align: center;
+        }
+        .form-container h2 {
+            margin-bottom: 1.5rem;
+            color: var(--new-dark);
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: none;
+            border-bottom: 2px solid var(--light-green);
+            border-radius: 0;
+            transition: border-color 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-container input:focus {
+            border-color: var(--primary-green);
+            box-shadow: none;
+            outline: none;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            background-color: var(--primary-green);
+            border: none;
+            border-radius: 10px;
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(165,214,167,0.2);
+        }
+        .form-container button:hover {
+            background-color: var(--white);
+            color: var(--primary-green);
+            border: 2px solid var(--primary-green);
+            transform: scale(1.05);
+        }
+        .form-container button[type="button"] {
+            background-color: var(--neutral-gray);
+        }
+        .form-container button[type="button"]:hover {
+            background-color: var(--white);
+            color: var(--neutral-gray);
+            border: 2px solid var(--neutral-gray);
+        }
+        .form-text a {
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+        .form-text a:hover {
+            text-decoration: underline;
+        }
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--light-green), var(--primary-green));
+            color: var(--dark-gray);
+            padding: 60px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        footer h5 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        footer p, footer a {
+            font-size: 0.9rem;
+            color: var(--white);
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: var(--pastel-green);
+            text-decoration: underline;
+        }
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: var(--pastel-green);
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .footer-social a:hover {
+            transform: scale(1.1);
+            background-color: var(--pastel-green);
+            color: var(--white);
+        }
+        .footer-social i {
+            font-size: 1.2rem;
+        }
+        .footer-bottom {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--neutral-gray);
+            border-top: 3px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+        /* Responsive Ayarları */
+        @media (max-width: 768px) {
+            #login {
+                padding: 60px 0;
+            }
+            .login-card {
+                padding: 20px;
+            }
+            .btn-primary {
+                padding: 12px 24px;
+            }
+            footer .row > div {
+                margin-bottom: 30px;
+            }
+            .footer-social a {
+                margin: 5px;
+            }
+        }
+        /* Özel Renk Ayarları */
+        #login h2, .navbar-nav .nav-link, footer h5 {
+            color: var(--new-dark) !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top" aria-label="Ana gezinme menüsü">
+        <div class="container">
+            <a class="navbar-brand" href="../app.html#hero"><img src="../logo_1.png" width="30"> <b></b>DiaScan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../app.html#hero">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../app.html#services">Hizmetler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../app.html#features">Özellikler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../app.html#doctors">Ekibimiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../app.html#contact">İletişim</a></li>
+                </ul>
+                <a href="login.html" class="btn btn-primary ms-3">Giriş Yap</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section id="login">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="login-card">
+                        <div class="form-container">
+                            <h2>Giriş Yap</h2>
+                            <form id="login-form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                                <input type="email" formControlName="email" placeholder="Email" class="form-control" required aria-describedby="emailHelp">
+                                
+                                <input type="password" formControlName="password" placeholder="Şifre" class="form-control" required>
+                                <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                                <button type="button" (click)="goToGlucoseEntry()" href="../glucose-entry/glucose-entry.html">Şeker Girişi Yap</button>
+                            </form>
+                            <div class="form-text text-center mt-3">
+                                <a href="../signup/signup.html">Hesabınız yok mu? Kayıt olun</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Hakkımızda</h5>
+                    <p>DiaScan, 2025’te sağlıkta yenilikçi bir adım attı. Sizinle birlikte daha sağlıklı bir gelecek inşa ediyoruz.</p>
+                    <p class="mt-2">İletişim: <a href="mailto:info@diascan.com">info@diascan.com</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hızlı Linkler</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#hero">Anasayfa</a></li>
+                        <li><a href="index.html#services">Hizmetler</a></li>
+                        <li><a href="index.html#features">Özellikler</a></li>
+                        <li><a href="index.html#doctors">Ekibimiz</a></li>
+                        <li><a href="index.html#contact">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Bizi Takip Edin</h5>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 DiaScan | Tüm hakları saklıdır. | <a href="#">Gizlilik Politikası</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Note: Angular form handling (loginForm, onLogin, goToGlucoseEntry) should be defined in a separate .ts file.
+        // Basic client-side validation for demonstration purposes
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.querySelector('input[formControlName="email"]').value;
+            const password = document.querySelector('input[formControlName="password"]').value;
+            if (email && password) {
+                alert('Giriş başarılı! Ana sayfaya yönlendiriliyorsunuz.');
+                // In a real Angular app, onLogin() would handle the submission
+                window.location.href = 'index.html';
+            } else {
+                alert('Lütfen tüm alanları doldurun.');
+            }
+        });
+        // Placeholder for goToGlucoseEntry
+        document.querySelector('button[type="button"]').addEventListener('click', function() {
+            alert('Şeker Girişi sayfasına yönlendiriliyorsunuz.');
+            // In a real Angular app, goToGlucoseEntry() would handle navigation
+            // window.location.href = 'glucose-entry.html';
+        });
+    </script>
+</body>
+</html>

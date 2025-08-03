@@ -198,8 +198,6 @@
 
   </details>
 
-  ---
-
    <details>
     <summary><h1>Sprint 3</h1></summary>
 

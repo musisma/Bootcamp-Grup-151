@@ -197,7 +197,7 @@
 
    <details>
     <summary><h1>Sprint 3</h1></summary>
-    **Product Backlog URL:**<a href="https://miro.com/app/board/uXjVJcKGRqU=/?share_link_id=163986261049">Miro Board Linki</a>
+    **Product Backlog URL**: <a href="https://miro.com/app/board/uXjVJcKGRqU=/?share_link_id=163986261049">Miro Board Linki</a>
 
 
   <details>

@@ -1,0 +1,276 @@
+        /* Genel Stil Ayarları */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F1F8F5;
+            color: #424242;
+            overflow-x: hidden;
+            transition: background-color 0.3s, color 0.3s;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        /* Renk Paleti */
+        :root {
+            --primary-green: #A5D6A7;
+            --light-green: #C8E6C9;
+            --neutral-gray: #B0BEC5;
+            --dark-gray: #424242;
+            --pastel-green: #81C784;
+            --white: #FAFAFA;
+            --light-bg: #F1F8F5;
+            --new-dark: #2d3436;
+            --new-feature-green: #81C784;
+        }
+        /* Karanlık Mod */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #2A3A3A;
+                color: #E0E0E0;
+            }
+            .navbar, .login-card {
+                background-color: #1A2A2A;
+            }
+            :root {
+                --primary-green: #81C784;
+                --light-green: #A5D6A7;
+            }
+        }
+        /* Navbar Stilleri */
+        .navbar {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 1rem 0;
+        }
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+        .nav-link {
+            color: var(--dark-gray);
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--primary-green);
+        }
+        .btn-primary {
+            background-color: var(--primary-green);
+            border-color: var(--primary-green);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(165,214,167,0.2);
+        }
+        .btn-primary:hover {
+            background-color: var(--white);
+            border-color: var(--primary-green);
+            color: var(--primary-green);
+            transform: scale(1.05);
+        }
+        /* Diabetes Risk Section */
+        #diabetes-risk {
+            flex: 1;
+            padding: 80px 0;
+            background-color: var(--light-bg);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .login-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 5px 5px 15px #e0e0e0, -5px -5px 15px #ffffff;
+            transition: transform 0.3s;
+            width: 100%;
+            max-width: 500px;
+        }
+        .login-card:hover {
+            transform: translateY(-5px);
+        }
+        .form-container {
+            text-align: center;
+        }
+        .form-container h2 {
+            margin-bottom: 1.5rem;
+            color: var(--new-dark);
+        }
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: none;
+            border-bottom: 2px solid var(--light-green);
+            border-radius: 0;
+            transition: border-color 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-container input:focus, .form-container select:focus {
+            border-color: var(--primary-green);
+            box-shadow: none;
+            outline: none;
+        }
+        .form-container select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23A5D6A7' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            padding-right: 30px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            background-color: var(--primary-green);
+            border: none;
+            border-radius: 10px;
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(165,214,167,0.2);
+        }
+        .form-container button:hover {
+            background-color: var(--white);
+            color: var(--primary-green);
+            border: 2px solid var(--primary-green);
+            transform: scale(1.05);
+        }
+        /* AI Analysis Section */
+        .ai-analysis-container {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 5px 5px 15px #e0e0e0, -5px -5px 15px #ffffff;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+            display: none;
+            transition: transform 0.3s;
+        }
+        .ai-analysis-container:hover {
+            transform: translateY(-5px);
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .ai-analysis-container .loading {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+        .ai-analysis-container .loading span {
+            width: 8px;
+            height: 8px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse 1.4s infinite ease-in-out both;
+        }
+        .ai-analysis-container .loading span:nth-child(2) { animation-delay: -0.16s; }
+        .ai-analysis-container .loading span:nth-child(3) { animation-delay: -0.32s; }
+        @keyframes pulse {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+        .ai-analysis-container .diet-suggestions {
+            margin-top: 1rem;
+        }
+        .ai-analysis-container .diet-suggestions p {
+            color: var(--dark-gray);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0.5rem 0;
+        }
+        .ai-analysis-container .diet-suggestions span {
+            margin-right: 8px;
+        }
+        /* SVG İllüstrasyonları */
+        .form-container::before {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A5D6A7' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' class='feather feather-activity'%3E%3Cpath d='M22 12h-4l-3 9L9 3l-3 9H2'/%3E%3C/svg%3E");
+            display: block;
+            margin: 0 auto 20px;
+            width: 48px;
+            height: 48px;
+        }
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--light-green), var(--primary-green));
+            color: var(--dark-gray);
+            padding: 60px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: auto;
+        }
+        footer h5 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        footer p, footer a {
+            font-size: 0.9rem;
+            color: var(--white);
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: var(--pastel-green);
+            text-decoration: underline;
+        }
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: var(--pastel-green);
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .footer-social a:hover {
+            transform: scale(1.1);
+            background-color: var(--pastel-green);
+            color: var(--white);
+        }
+        .footer-social i {
+            font-size: 1.2rem;
+        }
+        .footer-bottom {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--neutral-gray);
+            border-top: 3px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+        /* Responsive Ayarları */
+        @media (max-width: 768px) {
+            #diabetes-risk {
+                flex-direction: column;
+                align-items: center;
+                padding: 60px 0;
+            }
+            .login-card, .ai-analysis-container {
+                padding: 20px;
+                max-width: 100%;
+                margin-top: 20px;
+            }
+            .btn-primary {
+                padding: 12px 24px;
+            }
+            footer .row > div {
+                margin-bottom: 30px;
+            }
+            .footer-social a {
+                margin: 5px;
+            }
+        }
+    

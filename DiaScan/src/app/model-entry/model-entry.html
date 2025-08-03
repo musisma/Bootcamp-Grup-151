@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../logo_1.png" type="image/png">
+    <title>DiaScan - Diyabet Riski Hesaplama</title>
+    
+    <!-- SEO Meta Etiketleri -->
+    <meta name="description" content="DiaScan ile diyabet riskinizi hesaplayın, yapay zeka destekli öneriler alın.">
+    <meta name="keywords" content="diyabet, diyabet riski, yapay zeka, sağlık, risk hesaplama">
+    <meta property="og:title" content="DiaScan - Diyabet Riski Hesaplama">
+    <meta property="og:description" content="Bilgilerinizi girerek diyabet riskinizi öğrenin ve kişiselleştirilmiş öneriler alın.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Poppins ve Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Angular Scripts -->
+    <script src="https://code.angularjs.org/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="model-entry.css">
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top" aria-label="Ana gezinme menüsü">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html#hero"><img src="../../logo_1.png" width="30"> <b></b>DiaScan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#hero">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about/about.html">Hakkımızda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#services">Hizmetler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#features">Özellikler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#doctors">Ekibimiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../glucose-entry/glucose-entry.html">Şeker Hesapla</a></li>
+                </ul>
+                <a href="model-entry.html" class="btn btn-primary ms-3">Diyabet Riski Hesapla</a>
+                <a href="../login/login.html" class="btn btn-primary ms-3">Giriş Yap</a>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Diabetes Risk Section -->
+    <section id="diabetes-risk">
+        <div class="login-card">
+            <div class="form-container">
+                <h2>Diyabet Riskinizi Hesaplayın, Bilimsel Önerilerle Destek Alın</h2>
+                <form id="diabetes-form" [formGroup]="diabetesForm" (ngSubmit)="onSubmit()">
+                    <select formControlName="isPregnant" id="isPregnant" class="form-control" required aria-describedby="isPregnantHelp">
+                        <option value="" disabled selected>Hamilelik var mı?</option>
+                        <option value="true">Evet</option>
+                        <option value="false">Hayır</option>
+                    </select>
+                    <div id="isPregnantHelp" class="form-text"></div>
+                    <input type="number" formControlName="nPregnant" id="nPregnant" placeholder="Hamilelik sayısı" class="form-control" style="display: none;" aria-describedby="pregnantHelp">
+                    <div id="pregnantHelp" class="form-text"></div>
+                    <input type="number" formControlName="glucose" placeholder="Glikoz değeri (mg/dL)" class="form-control" required aria-describedby="glucoseHelp">
+                    <div id="glucoseHelp" class="form-text"></div>
+                    <input type="number" formControlName="tansiyon" placeholder="Tansiyon (mm Hg)" class="form-control" required aria-describedby="tansiyonHelp">
+                    <div id="tansiyonHelp" class="form-text"></div>
+                    <input type="number" formControlName="agirlik" placeholder="Ağırlık (kg)" class="form-control" required aria-describedby="agirlikHelp">
+                    <div id="agirlikHelp" class="form-text"></div>
+                    <input type="number" formControlName="insulin" placeholder="İnsülin (mu U/ml)" class="form-control" required aria-describedby="insulinHelp">
+                    <div id="insulinHelp" class="form-text"></div>
+                    <input type="number" step="0.1" formControlName="bmi" placeholder="Vücut Kitle Endeksi" class="form-control" required aria-describedby="bmiHelp">
+                    <div id="bmiHelp" class="form-text"></div>
+                    <input type="number" step="0.01" formControlName="pedigree" placeholder="Diyabet soyağacı fonksiyonu" class="form-control" required aria-describedby="pedigreeHelp">
+                    <div id="pedigreeHelp" class="form-text"></div>
+                    <input type="number" formControlName="age" placeholder="Yaş" class="form-control" required aria-describedby="ageHelp">
+                    <div id="ageHelp" class="form-text"></div>
+                    <select formControlName="diabete" class="form-control" required aria-describedby="diabeteHelp">
+                        <option value="" disabled selected>Diyabet var mı?</option>
+                        <option value="true">Evet</option>
+                        <option value="false">Hayır</option>
+                    </select>
+                    <div id="diabeteHelp" class="form-text"></div>
+                    <button type="submit">Hesapla</button>
+                </form>
+            </div>
+        </div>
+        <div class="ai-analysis-container" id="ai-analysis-container">
+            <div class="loading" id="loading-animation" style="display: none;">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="diet-suggestions" id="diet-suggestions"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Hakkımızda</h5>
+                    <p>DiaScan, 2025’te sağlıkta yenilikçi bir adım attı. Sizinle birlikte daha sağlıklı bir gelecek inşa ediyoruz.</p>
+                    <p class="mt-2">İletişim: <a href="mailto:info@diascan.com">info@diascan.com</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hızlı Linkler</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../../index.html#hero">Anasayfa</a></li>
+                        <li><a href="../../index.html#services">Hizmetler</a></li>
+                        <li><a href="../../index.html#features">Özellikler</a></li>
+                        <li><a href="../../index.html#doctors">Ekibimiz</a></li>
+                        <li><a href="../../index.html#contact">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Bizi Takip Edin</h5>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 DiaScan | Tüm hakları saklıdır. | <a href="#">Gizlilik Politikası</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Note: Angular form handling (diabetesForm, onSubmit) should be defined in a separate .ts file.
+        // Enhanced client-side simulation
+        const diabetesForm = document.getElementById('diabetes-form');
+        const isPregnantSelect = document.getElementById('isPregnant');
+        const nPregnantInput = document.getElementById('nPregnant');
+        const aiAnalysisContainer = document.getElementById('ai-analysis-container');
+        const loadingAnimation = document.getElementById('loading-animation');
+        const dietSuggestions = document.getElementById('diet-suggestions');
+
+        // Show/hide nPregnant input based on isPregnant selection
+        isPregnantSelect.addEventListener('change', function() {
+            if (this.value === 'true') {
+                nPregnantInput.style.display = 'block';
+                nPregnantInput.setAttribute('required', 'required');
+            } else {
+                nPregnantInput.style.display = 'none';
+                nPregnantInput.removeAttribute('required');
+                nPregnantInput.value = ''; // Clear input when hidden
+            }
+        });
+
+        diabetesForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const isPregnant = document.querySelector('select[formControlName="isPregnant"]').value;
+            const nPregnant = isPregnant === 'true' ? document.querySelector('input[formControlName="nPregnant"]').value : '0';
+            const glucose = document.querySelector('input[formControlName="glucose"]').value;
+            const tansiyon = document.querySelector('input[formControlName="tansiyon"]').value;
+            const agirlik = document.querySelector('input[formControlName="agirlik"]').value;
+            const insulin = document.querySelector('input[formControlName="insulin"]').value;
+            const bmi = document.querySelector('input[formControlName="bmi"]').value;
+            const pedigree = document.querySelector('input[formControlName="pedigree"]').value;
+            const age = document.querySelector('input[formControlName="age"]').value;
+            const diabete = document.querySelector('select[formControlName="diabete"]').value;
+
+            if (isPregnant && (isPregnant === 'false' || nPregnant) && glucose && tansiyon && agirlik && insulin && bmi && pedigree && age && diabete) {
+                aiAnalysisContainer.style.display = 'block';
+                loadingAnimation.style.display = 'flex';
+                dietSuggestions.style.display = 'none';
+                setTimeout(() => {
+                    loadingAnimation.style.display = 'none';
+                    dietSuggestions.style.display = 'block';
+                    const status = glucose >= 130 ? 'Yüksek' : glucose < 70 ? 'Düşük' : 'Normal';
+                    dietSuggestions.innerHTML = `
+                        <p><span>🍎</span>${status === 'Yüksek' ? 'Düşük şekerli elma tercih edin.' : 'Taze elma yiyebilirsiniz.'}</p>
+                        <p><span>🥦</span>${status === 'Düşük' ? 'Brokoli ile protein ekleyin.' : 'Buharda brokoli önerilir.'}</p>
+                        <p><span>🥑</span>${status === 'Yüksek' ? 'Az miktarda avokado alın.' : 'Avokado ile sağlıklı yağ alın.'}</p>
+                        <p><small>Analiz: Glikoz ${glucose} mg/dL, ${status.toLowerCase()} (02:14 PM +03, 03 Ağustos 2025)</small></p>
+                        <p><small>Girilen Veriler: Hamilelik: ${isPregnant === 'true' ? nPregnant : 'Yok'}, Tansiyon: ${tansiyon} mm Hg, Ağırlık: ${agirlik} kg, İnsülin: ${insulin} mu U/ml, BMI: ${bmi}, Pedigree: ${pedigree}, Yaş: ${age}, Diyabet: ${diabete === 'true' ? 'Evet' : 'Hayır'}</small></p>
+                    `;
+                }, 1500); // Simulate AI processing delay
+            } else {
+                alert('Lütfen tüm zorunlu alanları doldurun.');
+            }
+        });
+    </script>
+</body>
+</html>

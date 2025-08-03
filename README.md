@@ -265,7 +265,7 @@
 
     - Mobil uygulamanın geliştirme süreci tamamlanmıştır.
 
-    - Web sitesi için frontend ve backend çalışmaları başarıyla tamamlanmıştır.
+    - Web sitesi için frontend çalışmaları başarıyla tamamlanmış, ancak backend entegrasyonu sırasında oluşan hata nedeniyle bazı sayfalar tam olarak çalıştırılamamıştır.
 
     - Ürün, belirli test verileri ile test edilerek kişiye özel diyet listesi oluşturuldu.
 
@@ -274,20 +274,20 @@
     - Firebase ile kullanıcı kimlik doğrulama ve veri güvenliği için gerekli yapılandırmalar tamamlanmıştır.
     
   - **Sprint için Belirlenen Toplam Puan**: 100 puan
-  - **Tamamlanan Puan**: `(100 puan tamamlandı)`
-  - **Sprint Tamamlama Mantığı**: Sprint görevleri ekip içinde eşit şekilde dağıtıldı ve her bir görev 20 puan olmak üzere toplam 5 görev tamamlandı.
+  - **Tamamlanan Puan**: `(80 puan tamamlandı)`
+  - **Sprint Tamamlama Mantığı**: Sprint görevleri ekip içinde eşit şekilde dağıtıldı. Her bir görev 20 puan değerindeydi. 5 görevden 4'ü tamamlandı; web backend entegrasyonu sırasında yaşanan hata nedeniyle 1 görevde eksik kalındı.
   
   - **Sprint Review:**
     - Üçüncü sprintte, mobil uygulama ve web sitesi için hem frontend hem de backend geliştirme süreçleri tamamlandı.
     - Ürün, test verileriyle başarılı bir şekilde test edilerek kişiye özel diyet listesi oluşturuldu.
     - Ekip içi iletişim ve görev takibi daha düzenli hale geldi.
     - Firebase ile kullanıcı kimlik doğrulama ve veri güvenliği yapılandırmaları gerçekleştirildi.
-    - Sprint kapsamında belirlenen tüm hedefler zamanında ve eksiksiz şekilde tamamlandı.
+    - Web backend entegrasyonu sırasında yaşanan teknik hata nedeniyle web üzerinden tam test sağlanamadı.
   
   - **Sprint Retrospective:**
     - Bu sprintte ekip içi görev paylaşımı ve iletişim önceki sprintlere göre daha dengeli ve verimliydi.
     - Daily Scrum toplantıları devam ediyor, daha çok yazılı olarak iletişim kuruyoruz.
-    - Mobil ve web uygulamasının tamamlanması motivasyonu artırdı; ancak yapay zeka entegrasyonu ve test süreçlerinde daha fazla koordinasyon gerektiği görüldü.
+    - Ancak web backend entegrasyonu sırasında yaşanan hata, test ve entegrasyon süreçlerinde daha fazla teknik koordinasyon gerektiğini ortaya koydu.
  </details>
 
 

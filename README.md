@@ -192,11 +192,8 @@
     - Daily Scrum toplantıları artık aksamıyor, daha çok yazılı olarak iletişim kuruyoruz.
     - Artık backend geliştirmeye başlamalıyız.
  </details>
-
-  ---
-
-
   </details>
+
 
    <details>
     <summary><h1>Sprint 3</h1></summary>

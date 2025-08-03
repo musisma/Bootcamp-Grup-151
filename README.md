@@ -226,6 +226,18 @@
   </table>
   </details>
 
+  <details>
+    <summary><h3>Sprint 3 - Miro Board Screen Shots</h3></summary>
+  <table style="width: 100%;">
+    <tr>
+      <td colspan="1" style="width: 25%;"><img src="screenshots/sprint3_miro1" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><img src="screenshots/sprint3_miro2" style="max-width: 100%; height: auto;"></td>
+    </tr>
+  </table>
+  </details>
+
 <details>
     <summary><h3>Web Site Screenshot</h3></summary>
   <table style="width: 100%;">

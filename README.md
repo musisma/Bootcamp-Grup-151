@@ -227,6 +227,31 @@
   </details>
 
 <details>
+    <summary><h3>Web Site Screenshot</h3></summary>
+  <table style="width: 100%;">
+    <tr>
+      <td colspan="1" style="width: 25%;"><img src="screenshots/web_1.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+     <tr>
+      <td colspan="2" style="width: 25%;"><img src="screenshots/web_2.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+     <tr>
+      <td colspan="3" style="width: 25%;"><img src="screenshots/web_3.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+     <tr>
+      <td colspan="4" style="width: 25%;"><img src="screenshots/web_4.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+     <tr>
+      <td colspan="5" style="width: 25%;"><img src="screenshots/web_5.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+     <tr>
+      <td colspan="6" style="width: 25%;"><img src="screenshots/web_6.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+   
+  </table>
+  </details>
+
+<details>
     <summary><h3>App Screenshot</h3></summary>
   <table style="width: 100%;">
     <tr>

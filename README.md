@@ -226,6 +226,16 @@
   </table>
   </details>
 
+<details>
+    <summary><h3>App Screenshot</h3></summary>
+  <table style="width: 100%;">
+    <tr>
+      <td colspan="1" style="width: 25%;"><img src="screenshots/mobile_app.jpg" style="max-width: 100%; height: auto;"></td>
+    </tr>
+   
+  </table>
+  </details>
+
 **Sprint Notları**:
 
     - Mobil uygulamanın geliştirme süreci tamamlanmıştır.

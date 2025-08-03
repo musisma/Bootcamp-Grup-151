@@ -137,7 +137,7 @@
 
  <details>
     <summary><h1>Sprint 2</h1></summary>
- <a href="https://miro.com/app/board/uXjVJcKGRqU=/?share_link_id=623137938237">Miro Board Linki</a>
+ <a href="https://miro.com/app/board/uXjVJcKGRqU=/?share_link_id=163986261049">Miro Board Linki</a>
 
   <details>
     <summary><h3>Sprint 2 - Miro Board Screen Shots</h3></summary>
@@ -197,4 +197,66 @@
 
 
   </details>
+
+  ---
+
+   <details>
+    <summary><h1>Sprint 3</h1></summary>
+
+
+  <details>
+    <summary><h3>Sprint 3 - Google Collab Link</h3></summary>
+  <table style="width: 100%;">
+    <tr>
+      <td colspan="4" style="text-align: center;"><a href="https://colab.research.google.com/drive/1rtukOjivKSLa3CVLPMKQJGOUScvI5B1_?usp=sharing">Collab Linki</a></td>
+  </table>
+  </details>
+
+  <details>
+    <summary><h3>Sprint 3 - Daily Scrum</h3></summary>
+  <table style="width: 100%;">
+    <tr>
+      <td colspan="1" style="width: 25%;"><img src="screenshots/1.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="4"><img src="screenshots/2.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="4"><img src="screenshots/3.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="4"><img src="screenshots/4.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+  </table>
+  </details>
+
+**Sprint Notları**:
+
+    - Mobil uygulamanın geliştirme süreci tamamlanmıştır.
+
+    - Web sitesi için frontend ve backend çalışmaları başarıyla tamamlanmıştır.
+
+    - Ürün, belirli test verileri ile test edilerek kişiye özel diyet listesi oluşturuldu.
+
+    - Web ve mobil uygulamanın kullanıcı arayüzü iyileştirmeleri yapılmış, kullanıcı deneyimi (UX) odaklı tasarım güncellemeleri uygulanmıştır.
+
+    - Firebase ile kullanıcı kimlik doğrulama ve veri güvenliği için gerekli yapılandırmalar tamamlanmıştır.
+    
+  - **Sprint için Belirlenen Toplam Puan**: 100 puan
+  - **Tamamlanan Puan**: `(100 puan tamamlandı)`
+  - **Sprint Tamamlama Mantığı**: Sprint görevleri ekip içinde eşit şekilde dağıtıldı ve her bir görev 20 puan olmak üzere toplam 5 görev tamamlandı.
+  
+  - **Sprint Review:**
+    - Üçüncü sprintte, mobil uygulama ve web sitesi için hem frontend hem de backend geliştirme süreçleri tamamlandı.
+    - Ürün, test verileriyle başarılı bir şekilde test edilerek kişiye özel diyet listesi oluşturuldu.
+    - Ekip içi iletişim ve görev takibi daha düzenli hale geldi.
+    - Firebase ile kullanıcı kimlik doğrulama ve veri güvenliği yapılandırmaları gerçekleştirildi.
+    - Sprint kapsamında belirlenen tüm hedefler zamanında ve eksiksiz şekilde tamamlandı.
+  
+  - **Sprint Retrospective:**
+    - Bu sprintte ekip içi görev paylaşımı ve iletişim önceki sprintlere göre daha dengeli ve verimliydi.
+    - Daily Scrum toplantıları devam ediyor, daha çok yazılı olarak iletişim kuruyoruz.
+    - Mobil ve web uygulamasının tamamlanması motivasyonu artırdı; ancak yapay zeka entegrasyonu ve test süreçlerinde daha fazla koordinasyon gerektiği görüldü.
+ </details>
+
 

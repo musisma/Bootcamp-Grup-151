@@ -212,16 +212,16 @@
     <summary><h3>Sprint 3 - Daily Scrum</h3></summary>
   <table style="width: 100%;">
     <tr>
-      <td colspan="1" style="width: 25%;"><img src="screenshots/1.png" style="max-width: 100%; height: auto;"></td>
+      <td colspan="1" style="width: 25%;"><img src="screenshots/sprint3_1" style="max-width: 100%; height: auto;"></td>
     </tr>
     <tr>
-      <td colspan="4"><img src="screenshots/2.png" style="max-width: 100%; height: auto;"></td>
+      <td colspan="4"><img src="screenshots/sprint3_2" style="max-width: 100%; height: auto;"></td>
     </tr>
     <tr>
-      <td colspan="4"><img src="screenshots/3.png" style="max-width: 100%; height: auto;"></td>
+      <td colspan="4"><img src="screenshots/sprint3_3" style="max-width: 100%; height: auto;"></td>
     </tr>
     <tr>
-      <td colspan="4"><img src="screenshots/4.png" style="max-width: 100%; height: auto;"></td>
+      <td colspan="4"><img src="screenshots/sprint3_4" style="max-width: 100%; height: auto;"></td>
     </tr>
   </table>
   </details>

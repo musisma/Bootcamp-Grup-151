@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo_1.png" type="image/png">
     <title>DiaScan - Akıllı Sağlık Analizi</title>
+    
     <!-- SEO Meta Etiketleri -->
     <meta name="description" content="DiaScan ile tahlil sonuçlarınızı yapay zeka ile analiz edin, sağlık risklerinizi öğrenin.">
     <meta name="keywords" content="sağlık, tahlil analizi, yapay zeka, diyabet, sağlık takibi">
@@ -16,284 +18,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        /* Genel Stil Ayarları */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F1F8F5;
-            color: #424242;
-            overflow-x: hidden;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-        }
-        /* Renk Paleti */
-        :root {
-            --primary-green: #A5D6A7;
-            --light-green: #C8E6C9;
-            --neutral-gray: #B0BEC5;
-            --dark-gray: #424242;
-            --pastel-green: #81C784;
-            --white: #FAFAFA;
-            --light-bg: #F1F8F5;
-            --new-dark: #2d3436;
-            --new-feature-green: #81C784;
-        }
-        /* Karanlık Mod */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #2A3A3A;
-                color: #E0E0E0;
-            }
-            .navbar, .card {
-                background-color: #1A2A2A;
-            }
-            :root {
-                --primary-green: #81C784;
-                --light-green: #A5D6A7;
-            }
-        }
-        /* Navbar Stilleri */
-        .navbar {
-            background-color: var(--white);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            padding: 1rem 0;
-        }
-        .navbar-brand {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            color: var(--primary-green);
-        }
-        .nav-link {
-            color: var(--neutral-gray);
-            transition: color 0.3s;
-        }
-        .nav-link:hover {
-            color: var(--primary-green);
-        }
-        .btn-primary {
-            background-color: var(--primary-green);
-            border-color: var(--primary-green);
-            color: var(--white);
-            padding: 10px 20px;
-            border-radius: 10px;
-            transition: all 0.3s;
-            box-shadow: 0 4px 12px rgba(165,214,167,0.2);
-        }
-        .btn-primary:hover {
-            background-color: var(--white);
-            border-color: var(--primary-green);
-            color: var(--primary-green);
-            transform: scale(1.05);
-        }
-        /* Hero Section */
-        #hero {
-            background: linear-gradient(135deg, var(--light-green), var(--primary-green));
-            padding: 120px 0;
-            text-align: center;
-            color: var(--dark-gray);
-            position: relative;
-        }
-        #hero h1, #hero p, #hero .btn {
-            animation: fadeIn 1s ease-in;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        #hero h1 {
-            font-size: 2.8rem;
-            color: #FFFFFF;
-        }
-        #hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: var(--light-bg);
-        }
-        /* Hizmetler Bölümü */
-        #services {
-            padding: 80px 0;
-            background-color: var(--light-bg);
-        }
-        .service-card {
-            background-color: var(--white);
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 5px 5px 15px #e0e0e0, -5px -5px 15px #ffffff;
-            transition: transform 0.3s;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        .service-card i {
-            font-size: 40px;
-            color: var(--primary-green);
-            margin-bottom: 1rem;
-        }
-        .service-card p{
-          color: #747d8c;
-        }
-        /* Özellikler Bölümü */
-        #features {
-            padding: 80px 0;
-            background-color: var(--white);
-        }
-        .feature-card {
-            background-color: var(--new-feature-green);
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 5px 5px 15px #e0e0e0, -5px -5px 15px #ffffff;
-            transition: all 0.3s;
-            margin-bottom: 20px;
-            min-height: 300px;
-        }
-        .feature-card:hover {
-            transform: scale(1.05);
-        }
-        .feature-card i {
-            font-size: 40px;
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-        
-        .feature-card p{
-          color: #FFFFFF;
-        }
-        /* Doktorlar Bölümü */
-        #doctors {
-            padding: 80px 0;
-            background-color: var(--light-bg);
-        }
-        .doctor-card {
-            background-color: var(--white);
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 5px 5px 15px #e0e0e0, -5px -5px 15px #ffffff;
-            transition: transform 0.3s;
-        }
-        .doctor-card:hover {
-            transform: translateY(-5px);
-        }
-        .doctor-card p{
-          color: var(--dark-gray);
-        }
-        /* İletişim Bölümü */
-        #contact {
-            padding: 80px 0;
-            background-color: var(--white);
-        }
-        .form-control {
-            border: none;
-            border-bottom: 2px solid var(--light-green);
-            border-radius: 0;
-            transition: border-color 0.3s;
-        }
-        .form-control:focus {
-            border-color: var(--primary-green);
-            box-shadow: none;
-        }
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, var(--light-green), var(--primary-green));
-            color: var(--dark-gray);
-            padding: 60px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        footer h5 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--white);
-        }
-        footer p, footer a {
-            font-size: 0.9rem;
-            color: var(--white);
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: var(--pastel-green);
-            text-decoration: underline;
-        }
-        .footer-social a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            background-color: var(--pastel-green);
-            border-radius: 50%;
-            margin-right: 10px;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-        .footer-social a:hover {
-            transform: scale(1.1);
-            background-color: var(--pastel-green);
-            color: var(--white);
-        }
-        .footer-social i {
-            font-size: 1.2rem;
-        }
-        .footer-bottom {
-            margin-top: 30px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: var(--neutral-gray);
-            border-top: 3px solid rgba(255, 255, 255, 0.1);
-            padding-top: 15px;
-        }
-        /* Responsive Ayarları */
-        @media (max-width: 768px) {
-            #hero {
-                padding: 80px 0;
-            }
-            #hero h1 {
-                font-size: 2rem;
-            }
-            #hero p {
-                font-size: 1rem;
-            }
-            .btn-primary {
-                padding: 12px 24px;
-            }
-            .feature-card, .service-card, .doctor-card {
-                min-height: 200px;
-            }
-            footer .row > div {
-                margin-bottom: 30px;
-            }
-            .footer-social a {
-                margin: 5px;
-            }
-        }
-        /* Özel Renk Ayarları */
-        #home h2, #services h2, #features h2, #doctors h2, #contact h2,
-        .navbar-nav .nav-link, #services .service-card h4, #features .feature-card h4,
-        #doctors .doctor-card h4, footer h5 {
-            color: var(--new-dark) !important;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    
+    
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top" aria-label="Ana gezinme menüsü">
         <div class="container">
-            <a class="navbar-brand" href="#">DiaScan</a>
+            <a class="navbar-brand" href="#hero"><img src="logo_1.png" width="30"> <b></b>DiaScan</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#hero">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="app/about/about.html">Hakkımızda</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Hizmetler</a></li>
                     <li class="nav-item"><a class="nav-link" href="#features">Özellikler</a></li>
                     <li class="nav-item"><a class="nav-link" href="#doctors">Ekibimiz</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
                 </ul>
-                <a href="#contact" class="btn btn-primary ms-3">Raporunu Oluştur</a>
+                <a href="app/glucose-entry/glucose-entry.html" class="btn btn-primary ms-3">Şeker Hesapla</a>
+                <a href="app/login/login.html" class="btn btn-primary ms-3">Giriş Yap</a>
             </div>
         </div>
     </nav>
@@ -301,10 +48,19 @@
     <!-- Hero Section -->
     <section id="hero" aria-label="Ana tanıtım bölümü">
         <div class="container">
-            <h1>DiaScan, kendine iyi bak demenin dijital hali.</h1>
-            <p>Tahlil sonuçlarınızı yapay zeka ile yorumlayın, sağlığınızı kontrol altına alın.</p>
-            <a href="#contact" class="btn btn-primary me-2">Hemen Başla</a>
-            <a href="#features" class="btn btn-primary">Nasıl Çalışır?</a>
+            <div class="hero-content">
+                <div class="text-content">
+                    <h1>DiaScan, kendine iyi bak demenin dijital hali.</h1>
+                    <p>Tahlil sonuçlarınızı yapay zeka ile yorumlayın, sağlığınızı kontrol altına alın.</p>
+                    <a href="app/signup/signup.html" class="btn btn-primary me-2">Hemen Başla</a>
+                    <a href="app/about/about.html" class="btn btn-primary">Nasıl Çalışır?</a>
+                </div>
+                <div class="image-content">
+                    <div style="height: 400px; width: 100%;" >
+                         <img src="slider.png" style="height: 700px; width: 700px; margin-top: -150px; margin-right: -60px;">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -317,24 +73,24 @@
                     <div class="service-card">
                         <i class="bi bi-droplet"></i>
                         <h4>Tahlil Analizi</h4>
-                        <p>Kan şekeri (120 mg/dL), HbA1c (%6.5) ve kolesterol (180 mg/dL) analizleri ile sağlık durumunuzu anında öğrenin.</p>
-                        <a href="#" class="btn btn-primary mt-3">Detaylar</a>
+                        <p>Kan şekeri, HbA1c, kolesterol ve tansiyon gibi temel sağlık verilerinizi analiz ederek sağlık durumunuzu bilimsel verilere dayalı şekilde anında öğrenmenizi sağlar.</p>
+                        <a href="app/glucose-entry/glucose-entry.html" class="btn btn-primary mt-3">Detaylar</a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
                         <i class="bi bi-shield-check"></i>
                         <h4>Risk Değerlendirme</h4>
-                        <p>Kalp krizi (%15) ve felç riskini hesaplayarak erken önlem almanızı sağlar.</p>
-                        <a href="#" class="btn btn-primary mt-3">Detaylar</a>
+                        <p>Yapay zeka destekli algoritmalarla kalp krizi ve böbrek yetmezliği gibi hastalıklara yönelik kişisel risk skorlarınızı hesaplar; erken önlem almanıza yardımcı olur.</p>
+                        <a href="app/glucose-entry/glucose-entry.html" class="btn btn-primary mt-3">Detaylar</a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i class="bi bi-graph-up"></i>
-                        <h4>Sağlık Takibi</h4>
-                        <p>Son 30 günün verilerini (ör. 110-120 mg/dL) grafikle izler, trendleri analiz eder.</p>
-                        <a href="#" class="btn btn-primary mt-3">Detaylar</a>
+                        <i class="bi bi-apple"></i>
+                        <h4>Diyet Listesi</h4>
+                        <p>Kişisel risk raporlarınıza ve tahlil sonuçlarınıza göre özel olarak oluşturulan diyet önerileri sunar. Sağlık hedeflerinize uygun beslenme alışkanlıkları geliştirmenize destek olur.</p>
+                        <a href="app/glucose-entry/glucose-entry.html" class="btn btn-primary mt-3">Detaylar</a>
                     </div>
                 </div>
             </div>
@@ -348,35 +104,61 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="feature-card">
-                        <i class="bi bi-droplet-fill"></i>
-                        <h4 style="color: #FFFFFF;">Tahlil Analizi</h4>
-                        <p>Yapay zeka ile kan şekeri (120 mg/dL), HbA1c (%6.5) ve kolesterol (180 mg/dL) gibi tahlilleri 5 dakikada detaylıca analiz eder.</p>
+                        <i class="bi bi-android2"></i>
+                        <h4 style="color: #FFFFFF;"> Yapay Zeka Destekli Analiz</h4>
+                        <p>Gelişmiş algoritmalarla tahlil sonuçlarınızı hızlı ve doğru biçimde yorumlar.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="feature-card">
-                        <i class="bi bi-shield-fill"></i>
-                        <h4>Risk Tahmini</h4>
-                        <p>Kalp krizi (%15), felç (%10) ve diyabet risklerini kişisel verilere göre hassas bir şekilde hesaplar.</p>
+                        <i class="bi bi-lightning-fill"></i>
+                        <h4>Hızlı Geri Bildirim</h4>
+                        <p>Glikoz değerinizi girdikten sonra anında önerilere ulaşabilirsiniz.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <i class="bi bi-phone-fill"></i>
+                        <h4>Mobil Uyumlu Kullanım</h4>
+                        <p>Tüm işlemleri mobil cihazınızdan kolayca gerçekleştirebilirsiniz.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="feature-card">
-                        <i class="bi bi-lightbulb-fill"></i>
-                        <h4>Kişisel Öneriler</h4>
-                        <p>Sağlık durumunuza özel diyet (ör. az şeker) ve 30 dk yürüyüş gibi yaşam tarzı önerileri sunar.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="feature-card">
-                        <i class="bi bi-hospital"></i>
+                        <i class="bi bi-h-square-fill"></i>
                         <h4>Yerel Sağlık Desteği</h4>
-                        <p>Yerel sağlık kuruluşlarına yönlendirme ile tedavi sürecinizi başlatın.</p>
+                        <p>Riskli sonuçlar halinde sizi en yakın sağlık kuruluşlarına yönlendirir. Gerekli tedavi sürecinizi güvenle başlatmanızı sağlar.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Yeni Section: Mobil Uygulama -->
+    
+   <section id="mobile-app" aria-label="Mobil uygulama bölümü">
+        <div class="container">
+            <div class="mobile-content">
+                <div class="text-content">
+                    <h1>Mobil Uygulamamızla Tanışın!</h1>
+                    <h3>Her Yerde, Her An Yanınızda</h3>
+                    <p>Glikoz değerlerinizi kolayca girin, anında önerilerinizi alın.
+                    İster evde olun, ister dışarıda… Sağlığınızı her an takip edin.</p>
+                    <a href="#" class="btn btn-primary"> Google Play'den İndir</a>
+                    <a href="#" class="btn btn-primary">App Store’dan İndir</a>
+                    
+                </div>
+                <div class="image-content">
+                    <div style="height: 400px; width: 100%;">
+                        <img src="mockup.png" alt="Mobil Uygulama Görseli" style="height: 800px; width: 900; margin-top: -180px;">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Ekibimiz Bölümü -->
     <section id="doctors">
@@ -385,30 +167,30 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="doctor-card">
-                        <img src="https://via.placeholder.com/150" alt="Mustafa" class="img-fluid rounded-circle">
-                        <h4>Mustafa</h4>
-                        <p>Endokrinoloji Uzmanı, 10+ yıl deneyim</p>
+                        <img src="user.png" alt="Mustafa" width="150px" height="150px" class="img-fluid rounded-circle">
+                        <h4>Mustafa Öztürk</h4>
+                        <p>Scrum Master</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="doctor-card">
-                        <img src="https://via.placeholder.com/150" alt="Seda Gezginci" class="img-fluid rounded-circle">
+                        <img src="user.png" alt="Seda Gezginci" width="150px" height="150px" class="img-fluid rounded-circle">
                         <h4>Seda Gezginci</h4>
-                        <p>Kardiyoloji Uzmanı, 15+ yıl deneyim</p>
+                        <p>Product Owner</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="doctor-card">
-                        <img src="https://via.placeholder.com/150" alt="Sude" class="img-fluid rounded-circle">
-                        <h4>Sude</h4>
-                        <p>Uzman Diyetisyen, 8+ yıl deneyim xxxxxx</p>
+                        <img src="user.png" alt="Sude" width="150px" height="150px" class="img-fluid rounded-circle">
+                        <h4>Sude Kara</h4>
+                        <p>Developer</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="doctor-card">
-                        <img src="https://via.placeholder.com/150" alt="Nur Şahin" class="img-fluid rounded-circle">
+                        <img src="user.png" alt="Nur Şahin" width="150px" height="150px" class="img-fluid rounded-circle">
                         <h4>Nur Şahin</h4>
-                        <p>Genel Cerrahi Uzmanı, 12+ yıl deneyim</p>
+                        <p>Developer</p>
                     </div>
                 </div>
             </div>
@@ -425,12 +207,12 @@
                         <div class="mb-3">
                             <label for="name" class="form-label">Adınız</label>
                             <input type="text" class="form-control" id="name" required aria-describedby="nameHelp">
-                            <div id="nameHelp" class="form-text">Tam adınızı girin.</div>
+                            
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">E-posta</label>
                             <input type="email" class="form-control" id="email" required aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">Geçerli bir e-posta adresi girin.</div>
+                            
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Mesajınız</label>
@@ -455,7 +237,7 @@
                 <div class="col-md-4">
                     <h5>Hızlı Linkler</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#home">Anasayfa</a></li>
+                        <li><a href="#hero">Anasayfa</a></li>
                         <li><a href="#services">Hizmetler</a></li>
                         <li><a href="#features">Özellikler</a></li>
                         <li><a href="#doctors">Ekibimiz</a></li>
@@ -497,4 +279,3 @@
     </script>
 </body>
 </html>
-

@@ -1,0 +1,79 @@
+
+<form [formGroup]="diabetesForm" (ngSubmit)="onSubmit()" novalidate>
+  <div>
+    <label for="nPregnant">Hamilelik Sayısı</label>
+    <input id="nPregnant" type="number" formControlName="nPregnant" min="0" />
+    <div *ngIf="diabetesForm.controls['nPregnant'].invalid && diabetesForm.controls['nPregnant'].touched" class="error">
+      Lütfen geçerli bir hamilelik sayısı girin.
+    </div>
+  </div>
+
+  <div>
+    <label for="glucose">Glikoz (mg/dL)</label>
+    <input id="glucose" type="number" formControlName="glucose" min="0" />
+    <div *ngIf="diabetesForm.controls['glucose'].invalid && diabetesForm.controls['glucose'].touched" class="error">
+      Lütfen geçerli bir glikoz değeri girin.
+    </div>
+  </div>
+
+  <div>
+    <label for="tension">Tansiyon (mm Hg)</label>
+    <input id="tension" type="number" formControlName="tension" min="0" />
+    <div *ngIf="diabetesForm.controls['tension'].invalid && diabetesForm.controls['tension'].touched" class="error">
+      Lütfen geçerli bir tansiyon değeri girin.
+    </div>
+  </div>
+
+  <div>
+    <label for="thickness">Derinlik (mm)</label>
+    <input id="thickness" type="number" formControlName="thickness" min="0" />
+    <div *ngIf="diabetesForm.controls['thickness'].invalid && diabetesForm.controls['thickness'].touched" class="error">
+      Lütfen geçerli bir derinlik değeri girin.
+    </div>
+  </div>
+
+  <div>
+    <label for="insulin">İnsülin (mu U/ml)</label>
+    <input id="insulin" type="number" formControlName="insulin" min="0" />
+    <div *ngIf="diabetesForm.controls['insulin'].invalid && diabetesForm.controls['insulin'].touched" class="error">
+      Lütfen geçerli bir insülin değeri girin.
+    </div>
+  </div>
+
+  <div>
+    <label for="bmi">Vücut Kitle Endeksi (BMI)</label>
+    <input id="bmi" type="number" step="0.1" formControlName="bmi" min="0" />
+    <div *ngIf="diabetesForm.controls['bmi'].invalid && diabetesForm.controls['bmi'].touched" class="error">
+      Lütfen geçerli bir BMI değeri girin.
+    </div>
+  </div>
+
+  <div>
+    <label for="pedigree">Diyabet Soy Ağacı Fonksiyonu</label>
+    <input id="pedigree" type="number" step="0.01" formControlName="pedigree" min="0" />
+    <div *ngIf="diabetesForm.controls['pedigree'].invalid && diabetesForm.controls['pedigree'].touched" class="error">
+      Lütfen geçerli bir değer girin.
+    </div>
+  </div>
+
+  <div>
+    <label for="age">Yaş</label>
+    <input id="age" type="number" formControlName="age" min="0" />
+    <div *ngIf="diabetesForm.controls['age'].invalid && diabetesForm.controls['age'].touched" class="error">
+      Lütfen geçerli bir yaş girin.
+    </div>
+  </div>
+
+  <button type="submit">Gönder</button>
+</form>
+
+
+<style>
+  form div {
+    margin-bottom: 12px;
+  }
+  .error {
+    color: red;
+    font-size: 0.9em;
+  }
+</style>

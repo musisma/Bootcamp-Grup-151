@@ -1,0 +1,9 @@
+<div class="glucose-entry-container">
+  <h2>Şekerinizi Girin ve Tavsiye Listesini İsteyin</h2>
+  <form [formGroup]="glucoseForm" (ngSubmit)="onSubmit()">
+    <input type="number" formControlName="glucose" placeholder="Glikoz değeri" />
+    <button type="submit">Gir</button>
+  </form>
+
+  <app-diet-list *ngIf="showDietList" [glucose]="glucoseValue"></app-diet-list>
+</div>

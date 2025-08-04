@@ -1,0 +1,372 @@
+/* Main form container */
+form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 35px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.2);
+  border: 1px solid #bbf7d0;
+  position: relative;
+  overflow: hidden;
+  animation: slideInFromBottom 0.8s ease-out;
+}
+
+/* Add subtle background pattern */
+form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2322c55e' fill-opacity='0.03'%3E%3Cpath d='M30 30c0-8.3-6.7-15-15-15s-15 6.7-15 15 6.7 15 15 15 15-6.7 15-15zm15 0c0-8.3-6.7-15-15-15s-15 6.7-15 15 6.7 15 15 15 15-6.7 15-15z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  pointer-events: none;
+}
+
+form > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Form field container */
+form div {
+  margin-bottom: 20px;
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Stagger animation for form fields */
+form div:nth-child(1) { animation-delay: 0.1s; }
+form div:nth-child(2) { animation-delay: 0.15s; }
+form div:nth-child(3) { animation-delay: 0.2s; }
+form div:nth-child(4) { animation-delay: 0.25s; }
+form div:nth-child(5) { animation-delay: 0.3s; }
+form div:nth-child(6) { animation-delay: 0.35s; }
+form div:nth-child(7) { animation-delay: 0.4s; }
+form div:nth-child(8) { animation-delay: 0.45s; }
+
+/* Label styling */
+form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #166534;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+/* Input field styling */
+form input[type="number"] {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #bbf7d0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ffffff;
+  color: #166534;
+  transition: all 0.3s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+form input[type="number"]:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+  background-color: #f7fef9;
+  transform: translateY(-1px);
+}
+
+form input[type="number"]:hover {
+  border-color: #16a34a;
+}
+
+/* Valid input styling */
+form input[type="number"].ng-valid.ng-touched {
+  border-color: #22c55e;
+  background-color: #f0fdf4;
+}
+
+/* Invalid input styling */
+form input[type="number"].ng-invalid.ng-touched {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+  background-color: #fef2f2;
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Error message styling */
+.error {
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 6px;
+  padding: 8px 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  animation: fadeInError 0.3s ease-out;
+}
+
+.error::before {
+  content: '⚠️';
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Submit button styling */
+form button[type="submit"] {
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeInUp 0.8s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+form button[type="submit"]:hover {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+}
+
+form button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Button shine effect */
+form button[type="submit"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s;
+}
+
+form button[type="submit"]:hover::before {
+  left: 100%;
+}
+
+/* Disabled button state */
+form button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  background: #9ca3af;
+}
+
+form button[type="submit"]:disabled:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Loading state */
+form button[type="submit"].loading {
+  pointer-events: none;
+}
+
+form button[type="submit"].loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  border: 2px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animations */
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInError {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Form field focus enhancement */
+form div:focus-within label {
+  color: #22c55e;
+  transform: translateY(-2px);
+}
+
+/* Add medical icons to specific fields */
+form div:nth-child(1) label::before { content: '🤰 '; }
+form div:nth-child(2) label::before { content: '🩸 '; }
+form div:nth-child(3) label::before { content: '💓 '; }
+form div:nth-child(4) label::before { content: '📏 '; }
+form div:nth-child(5) label::before { content: '💉 '; }
+form div:nth-child(6) label::before { content: '⚖️ '; }
+form div:nth-child(7) label::before { content: '🧬 '; }
+form div:nth-child(8) label::before { content: '🎂 '; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  form {
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 90%;
+  }
+  
+  form label {
+    font-size: 15px;
+  }
+  
+  form input[type="number"] {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+  
+  form button[type="submit"] {
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 20px;
+    margin: 15px auto;
+  }
+  
+  form div {
+    margin-bottom: 16px;
+  }
+  
+  form label {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  
+  form input[type="number"] {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  form button[type="submit"] {
+    font-size: 14px;
+    padding: 12px 18px;
+    letter-spacing: 0.5px;
+  }
+  
+  .error {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  form {
+    border-color: #000;
+    background: #fff;
+  }
+  
+  form input[type="number"] {
+    border-color: #000;
+    background: #fff;
+    color: #000;
+  }
+  
+  form label {
+    color: #000;
+  }
+  
+  .error {
+    background: #fff;
+    border-color: #000;
+    color: #000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  form,
+  form div,
+  form button[type="submit"] {
+    animation: none;
+  }
+  
+  form input[type="number"]:focus {
+    transform: none;
+  }
+  
+  form button[type="submit"]:hover {
+    transform: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  form {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    background: white;
+  }
+  
+  form button[type="submit"] {
+    display: none;
+  }
+  
+  .error {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+  }
+}

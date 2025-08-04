@@ -1,0 +1,24 @@
+
+<div class="form-container">
+  <h2>Kayıt Ol</h2>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <input formControlName="name" placeholder="Ad" />
+    <input formControlName="surname" placeholder="Soyad" />
+    <input type="email" formControlName="email" placeholder="Email" />
+    <input type="password" formControlName="password" placeholder="Şifre" />
+    <input type="date" formControlName="birth_date" />
+    <label style="display: flex; align-items: center; gap: 8px; margin-top: 10px;">
+      <input type="checkbox" formControlName="diabet" />
+      Diyabet hastasıyım
+    </label>
+
+    <button type="submit">Kayıt Ol</button>
+  </form>
+    <p style="text-align:center; margin-top: 10px;">
+    Hesabın var mı? 
+    <button (click)="goToLogin()" type="button" style="background:none; border:none; color:blue; cursor:pointer;">
+      Giriş yap
+    </button>
+  </p>
+</div>
+

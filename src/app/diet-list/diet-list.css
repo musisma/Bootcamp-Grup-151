@@ -1,0 +1,310 @@
+.diet-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f7fef9 100%);
+  border-radius: 12px;
+  padding: 25px;
+  border: 2px solid #bbf7d0;
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.15);
+  position: relative;
+  overflow: hidden;
+  animation: slideInFromRight 0.6s ease-out;
+}
+
+/* Add decorative background pattern */
+.diet-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2322c55e' fill-opacity='0.03'%3E%3Cpath d='M25 25c0-6.9-5.6-12.5-12.5-12.5S0 18.1 0 25s5.6 12.5 12.5 12.5S25 31.9 25 25zm12.5 0c0-6.9-5.6-12.5-12.5-12.5S12.5 18.1 12.5 25s5.6 12.5 12.5 12.5S37.5 31.9 37.5 25z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  pointer-events: none;
+}
+
+.diet-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header styling */
+.diet-card h3 {
+  color: #166534;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #bbf7d0;
+  position: relative;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+/* Add decorative element to header */
+.diet-card h3::after {
+  content: '🥗';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  animation: bounce 2s infinite;
+}
+
+/* List styling */
+.diet-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Individual recommendation item styling */
+.recommendation-item {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  padding: 15px 20px;
+  border-radius: 8px;
+  border-left: 4px solid #22c55e;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1);
+  color: #166534;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  position: relative;
+  transition: all 0.3s ease;
+  animation: fadeInLeft 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Stagger animation for list items */
+.recommendation-item:nth-child(1) { animation-delay: 0.1s; }
+.recommendation-item:nth-child(2) { animation-delay: 0.2s; }
+.recommendation-item:nth-child(3) { animation-delay: 0.3s; }
+.recommendation-item:nth-child(4) { animation-delay: 0.4s; }
+.recommendation-item:nth-child(5) { animation-delay: 0.5s; }
+.recommendation-item:nth-child(n+6) { animation-delay: 0.6s; }
+
+/* Add bullet point icon */
+.recommendation-item::before {
+  content: '✓';
+  position: absolute;
+  left: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #22c55e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(34, 197, 94, 0.3);
+}
+
+/* Hover effects */
+.recommendation-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border-left-color: #16a34a;
+}
+
+.recommendation-item:hover::before {
+  background: #16a34a;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Animations */
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(-50%);
+  }
+  40% {
+    transform: translateY(-60%);
+  }
+  60% {
+    transform: translateY(-55%);
+  }
+}
+
+/* Empty state styling (when no recommendations) */
+.diet-card:empty::after {
+  content: 'Henüz tavsiye bulunmuyor...';
+  display: block;
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  padding: 40px 20px;
+}
+
+/* Loading state styling */
+.diet-card.loading {
+  position: relative;
+}
+
+.diet-card.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0 -15px;
+  border: 3px solid #bbf7d0;
+  border-top-color: #22c55e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .diet-card {
+    padding: 20px;
+    margin: 15px 0;
+  }
+  
+  .diet-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+  }
+  
+  .recommendation-item {
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+  
+  .recommendation-item::before {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .diet-card {
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .diet-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .diet-card h3::after {
+    font-size: 16px;
+  }
+  
+  .recommendation-item {
+    padding: 10px 14px;
+    font-size: 14px;
+    border-left-width: 3px;
+  }
+  
+  .recommendation-item::before {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+  }
+  
+  .recommendation-item:hover {
+    transform: translateX(3px);
+  }
+}
+
+/* Print styles */
+@media print {
+  .diet-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    background: white;
+  }
+  
+  .recommendation-item {
+    box-shadow: none;
+    background: #f9f9f9;
+  }
+  
+  .diet-card h3::after {
+    display: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .diet-card {
+    border-color: #000;
+    background: #fff;
+  }
+  
+  .recommendation-item {
+    border-left-color: #000;
+    background: #f5f5f5;
+    color: #000;
+  }
+  
+  .diet-card h3 {
+    color: #000;
+    border-bottom-color: #000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .diet-card,
+  .recommendation-item,
+  .diet-card h3 {
+    animation: none;
+  }
+  
+  .recommendation-item:hover {
+    transform: none;
+  }
+  
+  .diet-card h3::after {
+    animation: none;
+  }
+}

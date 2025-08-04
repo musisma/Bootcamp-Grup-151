@@ -1,0 +1,8 @@
+<div class="diet-card" *ngIf="recommendations.length > 0">
+  <h3>Tavsiye Listesi</h3>
+  <ul>
+    <li *ngFor="let item of recommendations" class="recommendation-item">
+      {{ item }}
+    </li>
+  </ul>
+</div>

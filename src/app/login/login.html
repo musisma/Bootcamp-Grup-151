@@ -1,0 +1,9 @@
+<div class="form-container">
+  <h2>Giriş Yap</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <input type="email" formControlName="email" placeholder="Email" />
+    <input type="password" formControlName="password" placeholder="Şifre" />
+    <button type="submit">Giriş Yap</button>
+  </form>
+  <button type="button" (click)="goToGlucoseEntry()">Şeker Girişi Yap</button>
+</div>
